@@ -2,12 +2,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <h2 className="text-2xl ">
-        A Social Medial App for <span className="text-blue-500"> Devs </span>
-        and
-        <span className="text-blue-500"> HR's</span>
-      </h2>
-    </div>
+    <section
+      className="flex-start
+    flex-col paddings mb-16"
+    >
+      <h1>Category</h1>
+      <h1>Posts</h1>
+      <h1>More</h1>
+    </section>
   );
 }
