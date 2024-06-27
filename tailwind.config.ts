@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,13 +7,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
-        "nav-border": "#EBEAFA",
+        "nav-border": "#EBEAEA",
         "light-white": "#FAFAFB",
         "light-white-100": "#F1F4F5",
         "light-white-200": "#d7d7d7",
@@ -27,21 +21,16 @@ const config: Config = {
         "primary-purple": "#9747FF",
         "gray-50": "#D9D9D9",
       },
-      maxWidth: {
-        "10xl": "168px",
+      boxShadow: {
+        menu: "0px 159px 95px rgba(13,12,34,0.01), 0px 71px 71px rgba(13,12,34,0.02), 0px 18px 39px rgba(13,12,34,0.02), 0px 0px 0px rgba(13,12,34,0.02)",
       },
       screens: {
         xs: "400px",
       },
-      // boxShadow:{
-      //   menu: '0px 159px 95px rgba(13,12,34,0.01),
-      //   0px 71px 71px rgba(13,12,34,0.02),
-      //   0px 18px 39px rgba(13,12,34,0.02),
-      //   0px 0px 0px rgba(13,12,34,0.02)',
-
-      // },
+      maxWidth: {
+        "10xl": "1680px",
+      },
     },
   },
   plugins: [],
 };
-export default config;
