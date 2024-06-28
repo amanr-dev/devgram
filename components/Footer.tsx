@@ -62,6 +62,10 @@ const Footer = () => {
               links={footerLinks[5].links}
             />
           </div>
+          <FooterLinksCol
+            title={footerLinks[6].title}
+            links={footerLinks[6].links}
+          />
         </div>
       </div>
     </footer>
