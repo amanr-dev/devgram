@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
+const FooterLinksCol = () => {
+  return <div>hello</div>;
+};
+
 const Footer = () => {
   return (
     <footer className="flexStart footer">
@@ -11,6 +15,9 @@ const Footer = () => {
             Devgram is the world's leading community for creatives to share,
             grow and get hired.
           </p>
+        </div>
+        <div className="flex flex-wrap gap-12">
+          <FooterLinksCol />
         </div>
       </div>
     </footer>
