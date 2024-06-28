@@ -1,8 +1,24 @@
+import { footerLinks } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const FooterLinksCol = () => {
-  return <div>hello</div>;
+type FooterLinksColProps = {
+  title: string;
+  links: Array<string>;
+};
+
+const FooterLinksCol = ({ title, links }: FooterLinksColProps) => {
+  return (
+    <div className="footer_column">
+      <h4 className="font-semibold ">{title}</h4>
+      <ul className="flex flex-col gap-2 font-normal">
+        {links.map((l) => (
+          <Link href="/">{l}</Link>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 const Footer = () => {
@@ -17,7 +33,35 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-wrap gap-12">
-          <FooterLinksCol />
+          <FooterLinksCol
+            title={footerLinks[0].title}
+            links={footerLinks[0].links}
+          />
+
+          <div className="flex-1 flex flex-col gap-4">
+            <FooterLinksCol
+              title={footerLinks[1].title}
+              links={footerLinks[1].links}
+            />
+            <FooterLinksCol
+              title={footerLinks[2].title}
+              links={footerLinks[2].links}
+            />
+          </div>
+          <FooterLinksCol
+            title={footerLinks[3].title}
+            links={footerLinks[3].links}
+          />
+          <div className="flex-1 flex flex-col gap-4">
+            <FooterLinksCol
+              title={footerLinks[4].title}
+              links={footerLinks[4].links}
+            />
+            <FooterLinksCol
+              title={footerLinks[5].title}
+              links={footerLinks[5].links}
+            />
+          </div>
         </div>
       </div>
     </footer>
