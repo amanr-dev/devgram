@@ -73,7 +73,7 @@ const Footer = () => {
         <p>@ 2024 Devgram. All rights reserved</p>
         <p className="text-gray">
           <span className="text-black font-semibold">11,001 </span>
-          projects submitted
+          projects submitted.
         </p>
       </div>
     </footer>
