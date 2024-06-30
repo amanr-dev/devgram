@@ -6,6 +6,12 @@ import { graph, config } from "@grafbase/sdk";
 
 const g = graph.Standalone();
 
-export default config({
+const User = g.type("User", {});
 
-})
+//    g.query('invoiceByNumber', {
+//      args: { invoiceNumber: g.string() },
+//      returns: g.ref(Invoice).list(),
+//      resolver: 'invoice/byNumber',
+//    })
+
+export default config({});
