@@ -8,8 +8,15 @@ const g = graph.Standalone();
 
 const User = g.type("User", {
   name: g.string(),
-  email: g.string().unique(),
+  email: g.string(),
+  avatarUrl: g.url(),
+  description: g.string(),
+  githubUrl: g.url().optional(),
+  linkedInUrl: g.url().optional(),
+  projects: g.
+
 });
+
 
 //    g.query('invoiceByNumber', {
 //      args: { invoiceNumber: g.string() },
