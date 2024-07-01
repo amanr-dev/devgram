@@ -6,20 +6,24 @@ import { graph, config } from "@grafbase/sdk";
 
 const g = graph.Standalone();
 
-const User = g.type("User", {
-  name: g.string(),
-  email: g.string(),
-  avatarUrl: g.url(),
-  description: g.string(),
-  githubUrl: g.url().optional(),
-  linkedInUrl: g.url().optional(),
-  projects: g.
 
-});
+
+
+type User @model {
+  name: String!,
+  email: String!,
+  avatarUrl: URL,
+  description: String!,
+  githubUrl: URL
+  linkedInUrl: URL
+  projects: URL
+ 
+}
+
 
 
 //    g.query('invoiceByNumber', {
-//      args: { invoiceNumber: g.string() },
+//      args: { invoiceNumber: g.String() },
 //      returns: g.ref(Invoice).list(),
 //      resolver: 'invoice/byNumber',
 //    })
