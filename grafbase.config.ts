@@ -6,6 +6,11 @@ import { graph, config } from "@grafbase/sdk";
 
 const g = graph.Standalone();
 
+const User = g.type("User", {
+  name: g.string(),
+  email: g.string(),
+});
+
 export default config({
   schema: g,
 });
