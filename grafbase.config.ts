@@ -9,6 +9,7 @@ const g = graph.Standalone();
 const User = g.type("User", {
   name: g.string(),
   email: g.string(),
+  avatarUrl: g.url(),
 });
 
 export default config({
