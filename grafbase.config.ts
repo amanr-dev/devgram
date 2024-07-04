@@ -11,6 +11,9 @@ const User = g.type("User", {
   email: g.string(),
   avatarUrl: g.url(),
   description: g.string(),
+  githubUrl: g.url(),
+  linkedInUrl: g.url(),
+  projects: 
 });
 
 export default config({
