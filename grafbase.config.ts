@@ -7,6 +7,18 @@ const g = graph.Standalone();
 
 const User = g.type("User", {
   name: g.string(),
+  email: g.string(),
+  avatarUrl: g.url(),
+  description: g.string().optional(),
+  githubUrl: g.url().optional(),
+  linkedInUrl: g.url().optional(),
+  projects: g.ref(Project),
 });
 
-export default config({});
+const Project = g.type("Project", {
+  title: g.string(),
+});
+
+export default config({
+  graph: g,
+});
