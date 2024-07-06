@@ -1,8 +1,5 @@
 import { graph, config } from "@grafbase/sdk";
 
-// Welcome to Grafbase!
-// Configure authentication, data sources, resolvers and caching for your GraphQL API.
-
 const g = graph.Standalone();
 
 const project = g.type("Project", {
@@ -28,3 +25,6 @@ const user = g.type("User", {
 export default config({
   graph: g,
 });
+
+// Example doc link
+// https://grafbase.com/guides/mongodb
