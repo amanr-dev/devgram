@@ -7,7 +7,7 @@ export default NextAuth({
 
 // TODO:- Add Backend part {
 
-//   auth: authjs,
+//  auth: authjs,
 //  orm: Prisma,
 //  db: MongoDB,
 
